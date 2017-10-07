@@ -1,2 +1,2 @@
-# dextrix
-Dextrix website 
+# dextretix
+Dexterix website 
