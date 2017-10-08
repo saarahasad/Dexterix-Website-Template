@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <link  type="text/css" rel="stylesheet"  href="css/bootstrap.min.css" /> 
+     <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+     <script>	
+ 
+      function init_map() {
+		var var_location = new google.maps.LatLng(12.958008,77.744005);
+ 
+        var var_mapoptions = {
+          center: var_location,
+          zoom: 16
+        };
+ 
+		var var_marker = new google.maps.Marker({
+			position: var_location,
+			map: var_map,
+			title:"Edureka"});
+ 
+        var var_map = new google.maps.Map(document.getElementById("map-container"),
+            var_mapoptions);
+ 
+		var_marker.setMap(var_map);	
+ 
+      } 
+      google.maps.event.addDomListener(window, 'load', init_map); 
+    </script>
+    
+    
+        <style>
+            body{
+                margin-top:50px;
+            }
+            footer{
+                margin-top:20px;
+                margin-bottom:20px;
+            }
+                #map-container { height: 300px }
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target="#primary-menu" >
+                        <!--
+                        <i class="icon-bar"></i>
+                        <i class="icon-bar"></i>
+                        <i class="icon-bar"></i>
+                        -->
+                    Menu
+                    </button>
+                    <a href="index.html" class="navbar-brand" style="color: #0277BD;  font-size:26px; " >
+                        edureka!
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="primary-menu">
+                    <ul class="nav navbar-nav">
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                        <li><a href="contact-us.html">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+      
+
+    <br/>
+    <div class="container">        
+           <div class="row">
+                  <h2>We are here</h2>  
+          </div>
+    </div>
+
+             <div id="map-container" class="col-md-12"></div>
+
+
+
+    <br/><br/>
+    <div class="container">        
+           <div class="row">
+                  <h2>Contact Form</h2>  <hr/>
+          </div>
+    </div>
+
+
+     <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <form action="" method="get" class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="name" class="control-label col-md-3">Name</label>
+                                <div class="col-md-4">
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name"/>
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label for="email" class="col-md-3 control-label">Email</label>
+                                    <div class="col-md-4">
+                                        <input type="email" class="form-control" placeholder="Enter your email"/>
+                                    </div>
+                            </div>   
+
+                        
+                            <div class="form-group">
+                                <label class="control-label col-md-3" for="message">Message</label>
+                                    <div class="col-md-4">
+                                        <textarea class="form-control" id="message" name="message" placeholder="Enter your message" rows="5"></textarea>
+                                    </div>
+                            </div>
+
+                             <div class="form-group">
+                                <label for="message" class="col-sm-3 control-label">What do you prefer?</label>
+                                <div class="col-md-4">
+                                    
+                                    <label class="radio-inline">
+                                    <input type="radio" name="radio" value="option1"/>Morning class
+                                    </label>
+                                    
+                                    <label class="radio-inline">
+                                    <input type="radio" name="radio" value="option2"/>Evening Class
+                                    </label>
+                                </div>
+                            </div> 
+
+                             <div class="form-group">
+                                 <label for="interested-courses" class="control-label col-md-3">Interested Courses</label>
+                                <div class="col-md-9" id="interested-courses">
+                                    <label class="checkbox-inline"><input type="checkbox" value="web development" id="chk-web-development" name="chk-interested-courses"/>Web development</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="Big data" id="chk-big-data" name="chk-interested-courses"/>Big Data</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="Finance and Marketing" id="chk-finance-marketing" name="chk-interested-courses"/>Marketing</label>
+                                </div>
+                            </div>
+                             <div class="form-group">
+                                <label class="control-label col-md-3" for="dropdown1">How did you find us?</label>
+                                <div class="col-md-9">
+                                    <select class="form-control" id="dropdown1" name="dropdown1">
+                                        <option value="friend">Friend</option>
+                                        <option value="news">News</option>
+                                        <option value="fb">Facebook</option>
+                                        <option value="google">Google Search Results</option>
+                                    </select>
+                                </div>
+                            </div>   
+                            <div class="form-group">
+                                <div class="col-md-offset-3 col-md-9">                                  
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="reset" class="btn btn-default">Reset</button>
+                                </div>
+                            </div>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-center">
+            &copy; Edureka 2017, All rights reserved. <a data-toggle="modal" href='#tnc'>Terms and Conditions</a>
+            <div class="modal fade" id="tnc">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h3 class="modal-title">Terms and Conditions</h3>
+                        </div>
+                        <div class="modal-body text-justify">
+                           <p>We are a team of tech enthusiats who are determined to make learning easy for everyone.
+                         At edureka we believe in awesome work, to make sure we provide a great learning experience to our users.
+                        <br/> <br/>
+                        
+                        Learning is meant to be an enjoyable activity and we put our best to turn it into that.
+                        <br/>
+                        If you think the same come  <a target="_blank" href="http://www.edureka.co/careers">join us</a>
+                     </p>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Ok, got it!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        
+        
+ 
+   <script src="js/jquery-1.11.3.js"></script> 
+     <script src="js/bootstrap.js"></script>   
+
+    
+       
+    </body>
+</html>
